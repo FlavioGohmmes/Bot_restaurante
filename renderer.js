@@ -113,7 +113,7 @@ function initializeBot() {
         `💳 *Formas de Pagamento* 💳\n\n` +
         `Aceitamos:\n` +
         `- ${config.formasPagamento}\n\n` +
-        `Exemplo: *2 Strogonoff de Frango e 1 Refrigerante, entrega na Rua das Flores, 123 , Pagamento via Pix*\n\n` +
+        `Exemplo: *2 Strogonoff de Frango e 1 Refrigerante, entrega na Rua das Flores, 123 , Pagamento via Pix *\n\n` +
         `Aguarde nossa confirmação! 😊`
       );
     }
