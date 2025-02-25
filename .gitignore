@@ -1,0 +1,7 @@
+# .gitignore
+node_modules/
+wwebjs_cache/
+assets/
+.DS_Store
+.env
+*.log

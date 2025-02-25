@@ -1,0 +1,22 @@
+{
+  "nomeRestaurante": "MARREIS Restaurante",
+  "horarioFuncionamento": "Segunda a Sexta: 11h às 22h\nSábado e Domingo: 12h às 23h",
+  "formasPagamento": "Dinheiro, Cartão de Crédito/Débito, Pix, Vale-Refeição",
+  "cardapio": {
+    "pratos": [
+      { "nome": "Strogonoff de Frango", "preco": 25.00 },
+      { "nome": "Lasanha à Bolonhesa", "preco": 30.00 },
+      { "nome": "Risoto de Camarão", "preco": 35.00 }
+    ],
+    "bebidas": [
+      { "nome": "Refrigerante", "preco": 6.00 },
+      { "nome": "Suco Natural", "preco": 8.00 },
+      { "nome": "Água Mineral", "preco": 4.00 }
+    ],
+    "sobremesas": [
+      { "nome": "Pudim de Leite", "preco": 10.00 },
+      { "nome": "Mousse de Chocolate", "preco": 12.00 },
+      { "nome": "Sorvete", "preco": 8.00 }
+    ]
+  }
+}
