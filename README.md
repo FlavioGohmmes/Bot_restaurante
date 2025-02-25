@@ -15,4 +15,4 @@ Um bot automatizado para WhatsApp que ajuda os clientes de um restaurante a ver 
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/restaurante-bot.git
+   git clone https://github.com/seu-usuario/Bot_restaurante.git

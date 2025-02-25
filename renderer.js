@@ -47,11 +47,11 @@ function initializeBot() {
     const name = contact.pushname;
 
     // Resposta inicial (menu)
-    if (msg.body.match(/(menu|cardápio|ola|oi|olá|bom dia|boa tarde|boa noite)/i) && msg.from.endsWith('@c.us')) {
+    if (msg.body.match(/(teste)/i) && msg.from.endsWith('@c.us')) {
       await simulateTyping(chat);
       await client.sendMessage(
         msg.from,
-        `Olá, ${name.split(" ")[0]}! 😊 Bem-vindo(a) ao *${config.nomeRestaurante}*. Como posso ajudar você hoje? Por favor, escolha uma das opções abaixo:\n\n` +
+        `Olá, ${name.split("* *")[0]}! 😊 Bem-vindo(a) ao *${config.nomeRestaurante}*. Como posso ajudar você hoje? Por favor, escolha uma das opções abaixo:\n\n` +
         `1 - Ver Cardápio\n` +
         `2 - Horário de Funcionamento\n` +
         `3 - Formas de Pagamento\n` +
@@ -110,7 +110,10 @@ function initializeBot() {
         `- O nome do prato ou bebida\n` +
         `- A quantidade\n` +
         `- Seu endereço de entrega (se for delivery)\n\n` +
-        `Exemplo: "2 Strogonoff de Frango e 1 Refrigerante, entrega na Rua das Flores, 123."\n\n` +
+        `💳 *Formas de Pagamento* 💳\n\n` +
+        `Aceitamos:\n` +
+        `- ${config.formasPagamento}\n\n` +
+        `Exemplo: *2 Strogonoff de Frango e 1 Refrigerante, entrega na Rua das Flores, 123 , Pagamento via Pix*\n\n` +
         `Aguarde nossa confirmação! 😊`
       );
     }
