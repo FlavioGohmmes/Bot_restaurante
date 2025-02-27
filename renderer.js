@@ -47,17 +47,17 @@ function initializeBot() {
     const name = contact.pushname;
 
     // Resposta inicial (menu)
-    if (msg.body.match(/(teste)/i) && msg.from.endsWith('@c.us')) {
+    if (msg.body.match(/(menu|Menu|dia|tarde|noite|oi|Oi|Olá|olá|ola|Ola)/i) && msg.from.endsWith('@c.us')) {
       await simulateTyping(chat);
       await client.sendMessage(
         msg.from,
         `Olá, ${name.split("* *")[0]}! 😊 Bem-vindo(a) ao *${config.nomeRestaurante}*. Como posso ajudar você hoje? Por favor, escolha uma das opções abaixo:\n\n` +
-        `1 - Ver Cardápio\n` +
-        `2 - Horário de Funcionamento\n` +
-        `3 - Formas de Pagamento\n` +
-        `4 - Fazer um Pedido\n` +
-        `5 - Reservar uma Mesa\n` +
-        `6 - Falar com um Atendente`
+        `*1 - Ver Cardápio*\n` +
+        `*2 - Horário de Funcionamento*\n` +
+        `*3 - Formas de Pagamento*\n` +
+        `*4 - Fazer um Pedido*\n` +
+        `*5 - Reservar uma Mesa*\n` +
+        `*6 - Falar com um Atendente*`
       );
     }
 
@@ -67,12 +67,10 @@ function initializeBot() {
       await client.sendMessage(
         msg.from,
         `🍽️ *Cardápio do ${config.nomeRestaurante}* 🍽️\n\n` +
-        `*Pratos Principais:*\n` +
-        `${config.cardapio.pratos.map(prato => `- ${prato.nome}: R$ ${prato.preco.toFixed(2)}`).join('\n')}\n\n` +
+        `*Pratos Principais:*\n\n` +
+        `${config.cardapio.pratos.map(prato => `${prato.nome} ${prato.preco}`).join('\n')}\n\n` +
         `*Bebidas:*\n` +
         `${config.cardapio.bebidas.map(bebida => `- ${bebida.nome}: R$ ${bebida.preco.toFixed(2)}`).join('\n')}\n\n` +
-        `*Sobremesas:*\n` +
-        `${config.cardapio.sobremesas.map(sobremesa => `- ${sobremesa.nome}: R$ ${sobremesa.preco.toFixed(2)}`).join('\n')}\n\n` +
         `Para fazer um pedido, digite *4*.`
       );
     }
@@ -109,11 +107,12 @@ function initializeBot() {
         `Para fazer seu pedido, por favor, envie:\n` +
         `- O nome do prato ou bebida\n` +
         `- A quantidade\n` +
-        `- Seu endereço de entrega (se for delivery)\n\n` +
+        `- Seu endereço de entrega (se for delivery)\n` +
+        `- Forma de pagamento\n\n` +
         `💳 *Formas de Pagamento* 💳\n\n` +
         `Aceitamos:\n` +
         `- ${config.formasPagamento}\n\n` +
-        `Exemplo: *2 Strogonoff de Frango e 1 Refrigerante, entrega na Rua das Flores, 123 , Pagamento via Pix *\n\n` +
+        `Exemplo: *2 Strogonoff de Frango Tamanho M,  1 Refrigerante, entrega na Rua das Flores, 123 , Pagamento via Pix*\n\n` +
         `Aguarde nossa confirmação! 😊`
       );
     }
@@ -142,6 +141,7 @@ function initializeBot() {
         `Um de nossos atendentes entrará em contato com você em breve. Aguarde, por favor! 😊`
       );
     }
+
   });
 
   client.initialize();

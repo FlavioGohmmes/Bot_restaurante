@@ -1,12 +1,20 @@
 {
   "nomeRestaurante": "MARREIS Restaurante",
   "horarioFuncionamento": "Segunda a Sexta: 11h às 22h\nSábado e Domingo: 12h às 23h",
-  "formasPagamento": "Dinheiro, Cartão de Crédito/Débito, Pix, Vale-Refeição",
+  "formasPagamento": "*Dinheiro, Cartão de Crédito/Débito, Pix, Vale-Refeição*",
   "cardapio": {
     "pratos": [
-      { "nome": "Strogonoff de Frango", "preco": 25.00 },
-      { "nome": "Lasanha à Bolonhesa", "preco": 30.00 },
-      { "nome": "Risoto de Camarão", "preco": 35.00 }
+      { "nome": "*ECONOMIA DO DIA* 💵", "preco": "*- P - R$ 12 / M - R$ 18*"},
+      { "nome": "- Frango a Passarinho ", "preco": ""},
+      { "nome": "- Linguiça ", "preco": ""},
+      { "nome": "- Carne Moida ", "preco": ""},
+      { "nome": "", "preco": ""},
+      { "nome": "*Cardapio do DIA* 🍽️","preco": "*- P - R$ 18 / M - R$ 20*"},
+      { "nome": "- Parmegiana de Frango ", "preco": "" },
+      { "nome": "- Carne de Panela ", "preco": ""},
+      { "nome": "- Bife de Pernil ", "preco": ""},
+      { "nome": "", "preco": ""},
+      { "nome": "*ACOMPANHAMENTOS: Arroz, Feijão, Macarrao, Quibebe e Farofa*", "preco": ""}
     ],
     "bebidas": [
       { "nome": "Refrigerante", "preco": 6.00 },

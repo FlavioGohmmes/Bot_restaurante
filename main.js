@@ -7,7 +7,7 @@ function createWindow() {
   // Cria a janela principal
   mainWindow = new BrowserWindow({
     width: 800,
-    height: 600,
+    height: 800,
     webPreferences: {
       nodeIntegration: true, // Permite usar Node.js na interface
       contextIsolation: false,
